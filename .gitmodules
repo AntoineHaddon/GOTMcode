@@ -1,12 +1,12 @@
 [submodule "extern/fabm"]
 	path = extern/fabm
-	url = https://github.com/PatrickFarnole/fabm
+	url = https://github.com/AntoineHaddon/fabm
 [submodule "extern/flexout"]
 	path = extern/flexout
-	url = https://github.com/PatrickFarnole/flexout
+	url = https://github.com/AntoineHaddon/flexout
 [submodule "extern/stim"]
 	path = extern/stim
-	url = https://github.com/PatrickFarnole/stim
+	url = https://github.com/AntoineHaddon/stim
 [submodule "extern/CVMix-src"]
 	path = extern/CVMix-src
 	url = https://github.com/CVMix/CVMix-src.git
