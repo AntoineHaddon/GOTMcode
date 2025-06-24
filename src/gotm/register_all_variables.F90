@@ -267,7 +267,8 @@
    call fm%register('rhoCp', '10^6 J m-3 K-1', 'volum heat capacity', standard_name='',dimensions=(/id_dim_dzice/), data1d=ice_uvic_rhoCp(2:nilay+1), category='ice') 
    call fm%register('Tice', 'Celsius', 'Ice slab temperature', standard_name='',dimensions=(/id_dim_zice/), data1d=ice_uvic_Tice(2:nilay+2), category='ice')       
    call fm%register('Sint', 'W m-3', 'Ice SW internal heat', standard_name='',dimensions=(/id_dim_zice/),data1d=ice_uvic_Sint(2:nilay+2), category='ice')    
-   call fm%register('Pari', 'W m-2', 'PAR radiation in ice', standard_name='',dimensions=(/id_dim_zice/), data1d=ice_uvic_Pari(2:nilay+2), category='ice')  
+   ! call fm%register('Pari', 'W m-2', 'PAR radiation in ice', standard_name='',dimensions=(/id_dim_zice/), data1d=ice_uvic_Pari(2:nilay+2), category='ice')  
+   call fm%register('Pari', 'W m-2', 'PAR radiation in ice', standard_name='',dimensions=(/id_dim_zice/), data1d=ice_uvic_Pari, category='ice')  
 
    return
    end subroutine register_stim_variables

@@ -62,7 +62,7 @@
    use ice,         only: init_ice, post_init_ice, do_ice, clean_ice, ice_cover
    use stim_variables,  only: Tice_surface,albedo_ice,transmissivity,nilay,ice_uvic_Tice
 #endif
-   use stim_variables,  only: ice_hs,ice_hi,ice_uvic_topmelt,ice_uvic_topgrowth,ice_uvic_termelt,ice_uvic_botmelt,ice_uvic_botgrowth,ice_uvic_tb,ice_uvic_ts
+   use stim_variables,  only: ice_hs,ice_hi,ice_uvic_topmelt,ice_uvic_topgrowth,ice_uvic_termelt,ice_uvic_botmelt,ice_uvic_botgrowth,ice_uvic_tb,ice_uvic_ts,ice_uvic_meant,ice_uvic_dmeant
    use stim_variables,  only: ice_uvic_Fs,ice_uvic_Ff,ice_uvic_parb,ice_uvic_parui,ice_uvic_Amelt
 
    use turbulence,  only: turb_method
@@ -580,6 +580,8 @@
       call model_fabm%link_horizontal_data(standard_variables_fabm%tendency_of_sea_ice_thickness_due_to_thermodynamics_melt,ice_uvic_botmelt)
       call model_fabm%link_horizontal_data(standard_variables_fabm%tendency_of_sea_ice_thickness_due_to_thermodynamics_grow,ice_uvic_botgrowth)
       call model_fabm%link_horizontal_data(standard_variables_fabm%sea_ice_temperature,ice_uvic_tb)
+      call model_fabm%link_horizontal_data(standard_variables_fabm%sea_ice_mean_temp,ice_uvic_meant)
+      call model_fabm%link_horizontal_data(standard_variables_fabm%sea_ice_temp_change,ice_uvic_dmeant)
       call model_fabm%link_horizontal_data(standard_variables_fabm%surface_ice_temperature,ice_uvic_ts)
       call model_fabm%link_horizontal_data(standard_variables_fabm%lowest_ice_layer_PAR,ice_uvic_parb)
       call model_fabm%link_horizontal_data(standard_variables_fabm%under_ice_PAR,ice_uvic_parui)
